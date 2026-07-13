@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.env
+*.db
+*.sqlite3
+instance/
+
+# Celery
+celerybeat-schedule
+celerybeat.pid
+
+# Node
+node_modules/
+dist/
+.DS_Store
+npm-debug.log*
+
+# Redis
+dump.rdb
+
+# IDE
+.vscode/
+.idea/
+*.swp

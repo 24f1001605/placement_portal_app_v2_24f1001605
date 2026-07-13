@@ -1,0 +1,69 @@
+openapi: 3.0.0
+info:
+  title: Placement Portal API
+  version: 2.0.0
+  description: API documentation for Placement Portal Application V2
+
+paths:
+  /api/auth/login:
+    post:
+      summary: Login user
+      description: Authenticate user and return token.
+
+  /api/auth/register/student:
+    post:
+      summary: Register student
+      description: Create a new student account.
+
+  /api/auth/register/company:
+    post:
+      summary: Register company
+      description: Create a new company account pending admin approval.
+
+  /api/admin/dashboard:
+    get:
+      summary: Admin dashboard statistics
+      description: Retrieve overall platform metrics.
+
+  /api/admin/companies:
+    get:
+      summary: List all companies
+      description: View and search registered companies.
+
+  /api/admin/students:
+    get:
+      summary: List all students
+      description: View and search registered students.
+
+  /api/admin/drives:
+    get:
+      summary: List all placement drives
+      description: Retrieve all placement drives.
+
+  /api/company/drives:
+    post:
+      summary: Create placement drive
+      description: Create a new placement drive pending admin approval.
+    get:
+      summary: Get company drives
+      description: Retrieve drives created by this company.
+
+  /api/company/drives/{did}/applications:
+    get:
+      summary: Get drive applications
+      description: View applicants for a drive.
+
+  /api/student/dashboard:
+    get:
+      summary: Student dashboard data
+      description: Retrieve student profile and dashboard counts.
+
+  /api/student/apply/{did}:
+    post:
+      summary: Apply to placement drive
+      description: Apply for a placement drive.
+
+  /api/student/applications:
+    get:
+      summary: Get student's application history
+      description: View student application history.
